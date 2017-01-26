@@ -1,23 +1,23 @@
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.8
-Release:	3
-Epoch:		3
+Version:	3.0
+Release:	1
+Epoch:		1
 License:	GPLv2+
 Group:		Databases
 URL:		http://tellico-project.org/
-Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
-Requires:	kdebase4-runtime
-Requires:	kdelibs4-core
+Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.zx
+Requires:	kdebase5-runtime
+Requires:	kdelibs5-core
 %if %{mdvver} < 201200
-Requires:	kdemultimedia4
+Requires:	kdemultimedia5
 %endif
-Requires:	kdepimlibs4-core
+Requires:	kdepimlibs5-core
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	kdepimlibs4-devel
+BuildRequires:	kdepimlibs5-devel
 %if %{mdvver} < 201200
 BuildRequires:	kdemultimedia4-devel
 %else
@@ -25,7 +25,7 @@ BuildRequires:	libkcddb-devel
 BuildRequires:	libkcompactdisc-devel
 %endif
 BuildRequires:	pkgconfig(libksane)
-BuildRequires:	kdelibs4-devel
+BuildRequires:	kdelibs5-devel
 BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
@@ -34,8 +34,8 @@ BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	kde4-macros
-BuildRequires:	qt4-devel
+BuildRequires:	kde5-macros
+BuildRequires:	qt5-devel
 Obsoletes:	bookcase
 Provides:	bookcase
 
@@ -53,7 +53,7 @@ directly from different web services such as amazon.com.
 %defattr (-,root,root)
 %doc AUTHORS ChangeLog
 %{_kde_bindir}/%{name}
-%{_kde_datadir}/applications/kde4/tellico.desktop
+%{_kde_datadir}/applications/kde5/tellico.desktop
 %{_kde_datadir}/mimelnk/application/x-tellico.desktop
 %{_kde_datadir}/mime/packages/tellico.xml
 %{_kde_datadir}/apps/%{name}
@@ -68,7 +68,7 @@ directly from different web services such as amazon.com.
 %setup -q
 
 %build
-%cmake_kde4
+%cmake_kde5
 %make
 
 %install
