@@ -1,4 +1,4 @@
 removed_sources:
-  tellico-2.3.6.tar.bz2: a362664cf90ccdc588e8fbe8392e82ee5fda36cd
-sources:
   tellico-2.3.8.tar.bz2: 9fe2507d3fbfbaf56cfbb2fb6c1c32e81378847d
+sources:
+  tellico-3.0.tar.xz:    c39e9628ed02d50d471bbf242dd65870992007f3
