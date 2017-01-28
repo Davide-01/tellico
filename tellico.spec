@@ -12,25 +12,25 @@ Requires:	kdelibs5-core
 %if %{mdvver} < 201200
 Requires:	kdemultimedia5
 %endif
-Requires:	kdepimlibs5-core
-BuildRequires:	qjson
-BuildRequires:	qjson-devel
+Requires:	kdepimlibs-core
+BuildRequires:	libqjson0
+BuildRequires:	libqjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	kdepimlibs5-devel
 %if %{mdvver} < 201200
-BuildRequires:	kdemultimedia4-devel
+BuildRequires:	libqt5multimedia-devel
 %else
 BuildRequires:	libkcddb-devel
 BuildRequires:	libkcompactdisc-devel
 %endif
 BuildRequires:	pkgconfig(libksane)
-BuildRequires:	kdelibs5-devel
+BuildRequires:	kdelibs-devel
 BuildRequires:	exempi-devel
-BuildRequires:	pkgconfig(libexslt)
+BuildRequires:	pkgconfig(libexslt0)
 BuildRequires:	imagemagick
 BuildRequires:	taglib-devel
-BuildRequires:	pkgconfig(poppler-qt4)
+BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
@@ -53,7 +53,7 @@ directly from different web services such as amazon.com.
 %defattr (-,root,root)
 %doc AUTHORS ChangeLog
 %{_kde_bindir}/%{name}
-%{_kde_datadir}/applications/kde5/tellico.desktop
+%{_kde_datadir}/applications/kde4/tellico.desktop
 %{_kde_datadir}/mimelnk/application/x-tellico.desktop
 %{_kde_datadir}/mime/packages/tellico.xml
 %{_kde_datadir}/apps/%{name}
